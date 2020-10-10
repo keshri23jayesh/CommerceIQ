@@ -28,6 +28,7 @@ class postCurdAPI(APIView):
         response = {}
         if entity is None:
             response["message"] = "Please Pass Some entity in Url. eg, http://127.0.0.1:8000/abc/"
+            response['status'] = 410
         else:
             pk = int(pk) if pk is not None else pk
             if len(query_params):
