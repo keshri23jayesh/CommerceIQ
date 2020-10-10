@@ -1,0 +1,33 @@
+{
+   "posts":[
+      {
+         "id":"0",
+         "title":"title3",
+         "author":"CommerceIQ",
+         "views":100,
+         "reviews":3
+      },
+      {
+         "id":1,
+         "title":"title3",
+         "author":"CommerceIQ",
+         "views":100,
+         "reviews":3
+      },
+      {
+         "id":2,
+         "title":"title3",
+         "author":"CommerceIQ",
+         "views":100,
+         "reviews":3
+      }
+   ],
+   "authors":[
+      {
+         "id":0,
+         "first_name":"title3",
+         "last_name":"CommerceIQ",
+         "posts":100
+      }
+   ]
+}

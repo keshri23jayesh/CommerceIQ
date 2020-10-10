@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "12ff73e2-5019-4f76-b1de-f6ca5fd75201",
+		"name": "CommerceIQ",
+		"description": "APIs description for CommerceIQ mini Project.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Return List of All the Posts."
+			},
+			"response": []
+		},
+		{
+			"name": "Get post By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Get Post by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Add new post by passing post payload. post id must be\nunique."
+			},
+			"response": []
+		},
+		{
+			"name": "Patch a post By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Patch Request Pass ID and DATA"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete post  by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Delete a post by passing id"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
