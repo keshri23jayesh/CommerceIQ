@@ -7,62 +7,98 @@
 	},
 	"item": [
 		{
-			"name": "Get posts",
+			"name": "Get Entity",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": ""
 				},
-				"description": "Return List of All the Posts."
+				"description": "Return List of All the Entity.\nTwo ways to call the Get API\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>\n"
 			},
 			"response": []
 		},
 		{
-			"name": "Get post By ID",
+			"name": "Get Entity By ID",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": ""
 				},
-				"description": "Get Post by ID"
+				"description": "Get Entity by ID\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>/<id>"
 			},
 			"response": []
 		},
 		{
-			"name": "Add new post",
+			"name": "Add new Entity",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": ""
 				},
-				"description": "Add new post by passing post payload. post id must be\nunique."
+				"description": "Add new Entity by passing Entity payload. Entity id must be unique.\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>\n\nwith Payload"
 			},
 			"response": []
 		},
 		{
-			"name": "Patch a post By ID",
+			"name": "Patch a Entity By ID",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": ""
 				},
-				"description": "Patch Request Pass ID and DATA"
+				"description": "Patch Entity Request Pass ID and DATA\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>/<id>\n\nwith payload"
 			},
 			"response": []
 		},
 		{
-			"name": "Delete post  by id",
+			"name": "Delete Entity  by id",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": ""
 				},
-				"description": "Delete a post by passing id"
+				"description": "Delete a Entity by passing id\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>/<id>"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT request for Entity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "PUT request for Entity by id.\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>/<id>\n\nwith payload"
+			},
+			"response": []
+		},
+		{
+			"name": "sort by entity key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "sort entity by passing key.\n\ne.g http://jayeshkeshri.pythonanywhere.com/<entiry>?_sort=<some_key>&_order=<asc_or_dsc>\n\n\n_sort=<some_key>&order=<asc_or_dsc>\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Key in entity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Get Request for Searching key in entity.\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>?q=<key>"
 			},
 			"response": []
 		}
