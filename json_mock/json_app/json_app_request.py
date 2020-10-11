@@ -28,7 +28,7 @@ class postCurdAPI(APIView):
         response = {}
         if entity is None:
             response["message"] = "Please Pass Some entity in Url. eg, http://127.0.0.1:8000/abc/"
-            response['status'] = 410
+            response['status'] = 400
         else:
             pk = int(pk) if pk is not None else pk
             if len(query_params):
@@ -44,7 +44,7 @@ class postCurdAPI(APIView):
         if response['status']:
             status = 200
         else:
-            status = 410
+            status = 400
         return JsonResponse(response, status=status, safe=False)
 
     def post(self, request, entity):
@@ -54,15 +54,35 @@ class postCurdAPI(APIView):
 
     def put(self, request, entity, pk=None):
         data = request.data
-        pk = int(pk) if pk is not None else pk
-        result = json_modifier_instance.put_or_patch_entity(pk, data, entity)
-        return JsonResponse(result, status=200, safe=False)
+        response = {}
+        if 'id' in data:
+            status = 400
+            response['status'] = status
+            response["message"] = "ID is Immutable"
+        else:
+            pk = int(pk) if pk is not None else pk
+            response = json_modifier_instance.put_or_patch_entity(pk, data, entity)
+            if response['status']:
+                status = 200
+            else:
+                status = 400
+        return JsonResponse(response, status=status, safe=False)
 
     def patch(self, request, entity, pk=None):
         data = request.data
-        pk = int(pk) if pk is not None else pk
-        result = json_modifier_instance.put_or_patch_entity(pk, data, entity)
-        return JsonResponse(result, status=200, safe=False)
+        response = {}
+        if 'id' in data:
+            status = 400
+            response['status'] = 400
+            response["message"] = "ID is Immutable"
+        else:
+            pk = int(pk) if pk is not None else pk
+            response = json_modifier_instance.put_or_patch_entity(pk, data, entity)
+            if response['status']:
+                status = 200
+            else:
+                status = 400
+        return JsonResponse(response, status=status, safe=False)
 
     def delete(self, request, entity, pk=None):
         pk = int(pk) if pk is not None else pk
