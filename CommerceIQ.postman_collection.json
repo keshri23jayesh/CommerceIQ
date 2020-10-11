@@ -12,9 +12,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://jayeshkeshri.pythonanywhere.com/<entity>"
 				},
-				"description": "Return List of All the Entity.\nTwo ways to call the Get API\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>\n"
+				"description": "Return List of All the Entity."
 			},
 			"response": []
 		},
@@ -24,33 +24,33 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://jayeshkeshri.pythonanywhere.com/<entity>/<id>"
 				},
-				"description": "Get Entity by ID\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>/<id>"
+				"description": "Get Entity by ID"
 			},
 			"response": []
 		},
 		{
 			"name": "Add new Entity",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://jayeshkeshri.pythonanywhere.com/<entity>"
 				},
-				"description": "Add new Entity by passing Entity payload. Entity id must be unique.\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>\n\nwith Payload"
+				"description": "Add new Entity by passing Entity payload. Entity id must be unique with Payload"
 			},
 			"response": []
 		},
 		{
 			"name": "Patch a Entity By ID",
 			"request": {
-				"method": "GET",
+				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://jayeshkeshri.pythonanywhere.com/<entity>/<id>"
 				},
-				"description": "Patch Entity Request Pass ID and DATA\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>/<id>\n\nwith payload"
+				"description": "Patch Entity Request Pass ID and DATA with payload"
 			},
 			"response": []
 		},
@@ -60,9 +60,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://jayeshkeshri.pythonanywhere.com/<entity>/<id>"
 				},
-				"description": "Delete a Entity by passing id\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>/<id>"
+				"description": "Delete a Entity by passing id"
 			},
 			"response": []
 		},
@@ -72,9 +72,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://jayeshkeshri.pythonanywhere.com/<entity>/<id>"
 				},
-				"description": "PUT request for Entity by id.\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>/<id>\n\nwith payload"
+				"description": "PUT request for Entity by id with payload"
 			},
 			"response": []
 		},
@@ -84,9 +84,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://jayeshkeshri.pythonanywhere.com/<entiry>?_sort=<some_key>&_order=<asc_or_dsc>"
 				},
-				"description": "sort entity by passing key.\n\ne.g http://jayeshkeshri.pythonanywhere.com/<entiry>?_sort=<some_key>&_order=<asc_or_dsc>\n\n\n_sort=<some_key>&order=<asc_or_dsc>\n\n"
+				"description": "sort entity by passing key."
 			},
 			"response": []
 		},
@@ -96,9 +96,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://jayeshkeshri.pythonanywhere.com/<entity>?q=<key>"
 				},
-				"description": "Get Request for Searching key in entity.\n\nhttp://jayeshkeshri.pythonanywhere.com/<entity>?q=<key>"
+				"description": "Get Request for Searching key in entity."
 			},
 			"response": []
 		}
