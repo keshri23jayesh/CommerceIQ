@@ -12,3 +12,16 @@ def query_set_to_dict(dict):
     for key in dict:
         res[key] = dict[key]
     return res
+
+def isNumber(x):
+    if type(x) == int:
+        return True
+    else:
+        return False
+
+
+def isStr(x):
+    if type(x) == str:
+        return True
+    else:
+        return False

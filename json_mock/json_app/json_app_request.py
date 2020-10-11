@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from django.http import JsonResponse
 
 from json_app.json_app_config import JsonModifier
-from utills.common_utill import query_set_to_dict
+from utills.common_utill import query_set_to_dict, isNumber, isStr
 
 json_modifier_instance = JsonModifier()
 
@@ -40,8 +40,10 @@ class postCurdAPI(APIView):
 
         if response['status']:
             status = 200
+            response['status'] = 200
         else:
             status = 400
+            response['status'] = 400
         return JsonResponse(response, status=status, safe=False)
 
     def post(self, request, entity):
@@ -51,9 +53,22 @@ class postCurdAPI(APIView):
         :param entity:
         :return:
         """
+        response = {}
         data = request.data
-        result = json_modifier_instance.post_entity(data, entity)
-        return JsonResponse(result, status=200, safe=False)
+        status = 400
+        if 'id' in data:
+            if not isStr(data['id']) and isNumber(data['id']):
+                response = json_modifier_instance.post_entity(data, entity)
+                if response['status']:
+                    response["status"] = 200
+                    status = 200
+            else:
+                response["message"] = "Please Pass integer Id in post payload"
+                response["status"] = 400
+        else:
+            response["message"] = "Please Pass Id in post payload"
+            response["status"] = 400
+        return JsonResponse(response, status=status, safe=False)
 
     def put(self, request, entity, pk=None):
         """
