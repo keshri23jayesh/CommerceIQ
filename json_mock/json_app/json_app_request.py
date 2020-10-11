@@ -22,9 +22,6 @@ class postCurdAPI(APIView):
         """
 
         query_params = query_set_to_dict(request.query_params.copy())
-
-
-
         response = {}
         if entity is None:
             response["message"] = "Please Pass Some entity in Url. eg, http://127.0.0.1:8000/abc/"
@@ -48,11 +45,24 @@ class postCurdAPI(APIView):
         return JsonResponse(response, status=status, safe=False)
 
     def post(self, request, entity):
+        """
+
+        :param request:
+        :param entity:
+        :return:
+        """
         data = request.data
         result = json_modifier_instance.post_entity(data, entity)
         return JsonResponse(result, status=200, safe=False)
 
     def put(self, request, entity, pk=None):
+        """
+
+        :param request:
+        :param entity:
+        :param pk:
+        :return:
+        """
         data = request.data
         response = {}
         if 'id' in data:
@@ -69,6 +79,13 @@ class postCurdAPI(APIView):
         return JsonResponse(response, status=status, safe=False)
 
     def patch(self, request, entity, pk=None):
+        """
+
+        :param request:
+        :param entity:
+        :param pk:
+        :return:
+        """
         data = request.data
         response = {}
         if 'id' in data:
@@ -85,6 +102,13 @@ class postCurdAPI(APIView):
         return JsonResponse(response, status=status, safe=False)
 
     def delete(self, request, entity, pk=None):
+        """
+
+        :param request:
+        :param entity:
+        :param pk:
+        :return:
+        """
         pk = int(pk) if pk is not None else pk
         result = json_modifier_instance.delete_entity(entity, pk)
         return JsonResponse(result, status=200, safe=False)

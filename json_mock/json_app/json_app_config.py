@@ -13,6 +13,12 @@ class JsonModifier:
         CRUD Operation for Posts
     """
     def sort_entity(self, entity, query_params):
+        """
+
+        :param entity:
+        :param query_params:
+        :return: list of entity in sorted order
+        """
         response = {}
         response['status'] = False
         with open(file_path) as json_file:
@@ -36,6 +42,12 @@ class JsonModifier:
         return response
 
     def search_entity(self, entity, query_params):
+        """
+
+        :param entity:
+        :param query_params:
+        :return: list of entity in mahced with query param
+        """
         response = {}
         response['status'] = False
         with open(file_path) as json_file:
@@ -59,6 +71,12 @@ class JsonModifier:
         return response
 
     def search_basic_entity(self, entity, query_params):
+        """
+
+        :param entity:
+        :param query_params:
+        :return list of entity mathing with query param:
+        """
         response = {}
         response['status'] = False
         with open(file_path) as json_file:
@@ -81,7 +99,7 @@ class JsonModifier:
 
         :param key:
         :param entity:
-        :return:
+        :return return list of entity:
         """
         response = {}
         response['status'] = False
@@ -107,8 +125,9 @@ class JsonModifier:
     def post_entity(self, new_elemnt, entity):
         """
 
-        :param key:
-        :return:
+        :param new_elemnt:
+        :param entity:
+        :return post new entity:
         """
         response = {}
         response['status'] = True
@@ -139,7 +158,7 @@ class JsonModifier:
 
         :param key:
         :param data:
-        :return:
+        :return update entity:
         """
         response = {}
         response['status'] = False
@@ -166,6 +185,12 @@ class JsonModifier:
         return response
 
     def delete_entity(self, entity, key):
+        """
+
+        :param entity:
+        :param key:
+        :return delete entity:
+        """
         response = {}
         response['status'] = False
         with open(file_path, 'r') as data_file:
